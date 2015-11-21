@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acn-Wa-VyV">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVs-kY-psX">
+                                <rect key="frame" x="0.0" y="30" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d5S-k9-JzF"/>
+                                    <constraint firstAttribute="width" constant="40" id="qXH-2i-HzQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="loadWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dEf-l6-Piy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-mh-H8P">
+                                <rect key="frame" x="40" y="30" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1mu-8S-ffs"/>
+                                    <constraint firstAttribute="height" constant="40" id="Y0a-Pd-lI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="loadWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="410-Yr-v4Y"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-X7-cyb">
+                                <rect key="frame" x="82" y="35" width="448" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3M-yx-krM">
+                                <rect key="frame" x="535" y="35" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bJ2-QD-hcR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="loadWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsv-En-eVb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="top" secondItem="gaM-mh-H8P" secondAttribute="bottom" id="4vH-Ug-nxY"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="7lF-j4-M0q"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="top" secondItem="X3M-yx-krM" secondAttribute="bottom" constant="5" id="BGu-61-qFm"/>
+                            <constraint firstAttribute="trailing" secondItem="acn-Wa-VyV" secondAttribute="trailing" id="EAI-Ij-VzE"/>
+                            <constraint firstItem="tVs-kY-psX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EK6-nF-1Nc"/>
+                            <constraint firstAttribute="trailing" secondItem="X3M-yx-krM" secondAttribute="trailing" constant="5" id="JYs-sA-7E9"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="top" secondItem="tVs-kY-psX" secondAttribute="bottom" id="OAt-6y-iol"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Og2-WU-YIt"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="top" secondItem="ltI-X7-cyb" secondAttribute="bottom" constant="5" id="Y4m-z3-fg5"/>
+                            <constraint firstItem="acn-Wa-VyV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YXJ-dZ-vzy"/>
+                            <constraint firstItem="gaM-mh-H8P" firstAttribute="leading" secondItem="tVs-kY-psX" secondAttribute="trailing" id="kYb-T5-wuH"/>
+                            <constraint firstItem="ltI-X7-cyb" firstAttribute="leading" secondItem="gaM-mh-H8P" secondAttribute="trailing" constant="2" id="y2P-n2-IEV"/>
+                            <constraint firstItem="X3M-yx-krM" firstAttribute="leading" secondItem="ltI-X7-cyb" secondAttribute="trailing" constant="5" id="zzI-ya-flh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webField" destination="ltI-X7-cyb" id="eXQ-5m-KjZ"/>
+                        <outlet property="webView" destination="acn-Wa-VyV" id="GJq-mE-rjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="400"/>
+        </scene>
+    </scenes>
+</document>
